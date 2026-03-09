@@ -1544,7 +1544,7 @@ def tab_data(tdf, adf, rdf, mc, sc_name):
     nh = len(rdf[rdf["rating"] == "High"])
     nm = len(rdf[rdf["rating"] == "Moderate"])
     nl = len(rdf[rdf["rating"] == "Low"])
-    txt = f"""African Rules-of-Origin Circumvention Platform - EXECUTIVE SUMMARY
+    txt = f"""Africa Rules-of-Origin Circumvention Platform - EXECUTIVE SUMMARY
 Scenario: {sc_name}
 Countries: {len(rdf)} | Critical: {nc} | High: {nh} | Moderate: {nm} | Low: {nl}
 
@@ -1572,7 +1572,7 @@ def main():
     with st.spinner("Running analysis pipeline..."):
         tdf, gov_df, adf, mc, rdf = load_all(tuple(sorted(sel)), z_th, cap_th, n_sim, sc_name)
 
-    st.title("African Rules-of-Origin Circumvention Simulator")
+    st.title("Africa Rules-of-Origin Circumvention Simulator")
     sc = SCENARIOS[sc_name]
     st.markdown(f"**Scenario**: {sc.name} | **Countries**: {len(sel)} | **MC Iterations**: {n_sim:,}")
 
@@ -1588,7 +1588,7 @@ def main():
     with t6: tab_data(tdf, adf, rdf, mc, sc_name)
 
     st.markdown("---")
-    st.markdown('<div class="footer">African Rules-of-Origin Circumvention Simulator | Open-Source Simulation Tool | '
+    st.markdown('<div class="footer">Africa Rules-of-Origin Circumvention Simulator | Open-Source Simulation Tool | '
                 'Data: UN Comtrade, World Bank WGI, EU Access2Markets, AfCFTA e-Tariff Book | '
                 'MC calibration: EPPO/OLAF enforcement statistics</div>', unsafe_allow_html=True)
 
