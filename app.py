@@ -32,7 +32,7 @@ import hashlib
 
 st.set_page_config(
     page_title="Rules-of-Origin Circumvention Simulator",
-    page_icon="🌍",
+    page_icon="🎛️",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -1142,8 +1142,8 @@ def fig_radar(regdf):
 
 def render_sidebar():
     with st.sidebar:
-        st.title("EPA-AfCFTA Platform")
-        st.caption("Rules-of-Origin Circumvention Simulator")
+        st.title("Africa Rules-of-Origin Circumvention Simulator")
+        st.caption("Updated")
         st.markdown("---")
 
         st.subheader("Country Selection")
