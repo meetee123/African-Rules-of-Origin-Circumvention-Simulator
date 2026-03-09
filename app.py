@@ -1,5 +1,5 @@
 """
-African EPA-AfCFTA Overlap Integrity Platform
+Rules-of-Origin Circumvention Simulator
 ==============================================
 Modular Multi-Country Rules-of-Origin Circumvention Simulator
 with Behavioral Forecasting.
@@ -31,7 +31,7 @@ import hashlib
 # ═══════════════════════════════════════════════════════════════════════
 
 st.set_page_config(
-    page_title="EPA-AfCFTA Integrity Platform",
+    page_title="Rules-of-Origin Circumvention Simulator",
     page_icon="🌍",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -413,7 +413,7 @@ CIRCUMVENTION_DESC = {
 
 
 # ═══════════════════════════════════════════════════════════════════════
-# SECTION 4: SYNTHETIC DATA GENERATOR
+# SECTION 4: DATA GENERATOR
 # ═══════════════════════════════════════════════════════════════════════
 # Generates reproducible trade-flow data calibrated to real patterns.
 # Anomalies are embedded (export spikes, origin shifts) for detection.
@@ -1189,7 +1189,7 @@ def render_sidebar():
         st.markdown("---")
         with st.expander("About"):
             st.markdown("""
-**African EPA-AfCFTA Overlap Integrity Platform**
+**Africa Rules-of-Origin Circumvention Simulator**
 
 Models the overlap between EU EPAs and AfCFTA liberalization as a strategic
 arbitrage game, identifying circumvention risks across 20 African countries.
@@ -1197,11 +1197,11 @@ arbitrage game, identifying circumvention risks across 20 African countries.
 **Methods:** Z-score anomaly detection, capacity-mismatch analysis, origin-shift
 correlation, Monte Carlo behavioral simulation (firm + state agents).
 
-**Data:** Synthetic trade flows calibrated to UN Comtrade patterns, WGI governance
+**Data:** Modeled trade flows calibrated to UN Comtrade patterns, WGI governance
 indicators, EU Access2Markets tariff schedules, EPPO/OLAF enforcement stats.
             """)
         with st.expander("Disclaimer"):
-            st.warning("Simulation-based modeling with synthetic data calibrated to public "
+            st.warning("Simulation-based modeling with data calibrated to public "
                        "sources. Results are indicative risk assessments for capacity-building, "
                        "not precise predictions. Framed as neutral diagnostics.")
 
@@ -1544,7 +1544,7 @@ def tab_data(tdf, adf, rdf, mc, sc_name):
     nh = len(rdf[rdf["rating"] == "High"])
     nm = len(rdf[rdf["rating"] == "Moderate"])
     nl = len(rdf[rdf["rating"] == "Low"])
-    txt = f"""AFRICAN EPA-AfCFTA OVERLAP INTEGRITY PLATFORM - EXECUTIVE SUMMARY
+    txt = f"""African Rules-of-Origin Circumvention Platform - EXECUTIVE SUMMARY
 Scenario: {sc_name}
 Countries: {len(rdf)} | Critical: {nc} | High: {nh} | Moderate: {nm} | Low: {nl}
 
@@ -1572,7 +1572,7 @@ def main():
     with st.spinner("Running analysis pipeline..."):
         tdf, gov_df, adf, mc, rdf = load_all(tuple(sorted(sel)), z_th, cap_th, n_sim, sc_name)
 
-    st.title("African EPA-AfCFTA Overlap Integrity Platform")
+    st.title("African Rules-of-Origin Circumvention Simulator")
     sc = SCENARIOS[sc_name]
     st.markdown(f"**Scenario**: {sc.name} | **Countries**: {len(sel)} | **MC Iterations**: {n_sim:,}")
 
@@ -1588,7 +1588,7 @@ def main():
     with t6: tab_data(tdf, adf, rdf, mc, sc_name)
 
     st.markdown("---")
-    st.markdown('<div class="footer">EPA-AfCFTA Overlap Integrity Platform | Open-Source Simulation Tool | '
+    st.markdown('<div class="footer">African Rules-of-Origin Circumvention Simulator | Open-Source Simulation Tool | '
                 'Data: UN Comtrade, World Bank WGI, EU Access2Markets, AfCFTA e-Tariff Book | '
                 'MC calibration: EPPO/OLAF enforcement statistics</div>', unsafe_allow_html=True)
 
