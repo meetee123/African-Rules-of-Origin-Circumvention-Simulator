@@ -1142,7 +1142,7 @@ def fig_radar(regdf):
 
 def render_sidebar():
     with st.sidebar:
-        st.title("Africa Rules-of-Origin Circumvention Simulator")
+        st.title("Rules-of-Origin Circumvention Simulator")
         st.caption("Updated")
         st.markdown("---")
 
@@ -1189,7 +1189,7 @@ def render_sidebar():
         st.markdown("---")
         with st.expander("About"):
             st.markdown("""
-**Africa Rules-of-Origin Circumvention Simulator**
+**Rules-of-Origin Circumvention Simulator**
 
 Models the overlap between EU EPAs and AfCFTA liberalization as a strategic
 arbitrage game, identifying circumvention risks across 20 African countries.
@@ -1572,7 +1572,7 @@ def main():
     with st.spinner("Running analysis pipeline..."):
         tdf, gov_df, adf, mc, rdf = load_all(tuple(sorted(sel)), z_th, cap_th, n_sim, sc_name)
 
-    st.title("Africa Rules-of-Origin Circumvention Simulator")
+    st.title("Rules-of-Origin Circumvention Simulator")
     sc = SCENARIOS[sc_name]
     st.markdown(f"**Scenario**: {sc.name} | **Countries**: {len(sel)} | **MC Iterations**: {n_sim:,}")
 
@@ -1588,7 +1588,7 @@ def main():
     with t6: tab_data(tdf, adf, rdf, mc, sc_name)
 
     st.markdown("---")
-    st.markdown('<div class="footer">Africa Rules-of-Origin Circumvention Simulator | Open-Source Simulation Tool | '
+    st.markdown('<div class="footer">Rules-of-Origin Circumvention Simulator | Open-Source Simulation Tool | '
                 'Data: UN Comtrade, World Bank WGI, EU Access2Markets, AfCFTA e-Tariff Book | '
                 'MC calibration: EPPO/OLAF enforcement statistics</div>', unsafe_allow_html=True)
 
