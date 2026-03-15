@@ -1,5 +1,5 @@
 """
-Rules-of-Origin Circumvention Simulator
+International Trade Circumvention Simulator
 ==============================================
 Modular Multi-Country Rules-of-Origin Circumvention Simulator
 with Behavioral Forecasting.
@@ -31,12 +31,11 @@ import hashlib
 # ═══════════════════════════════════════════════════════════════════════
 
 st.set_page_config(
-    page_title="Rules-of-Origin Circumvention Simulator",
+    page_title="EU-Africa Trade Circumvention Simulator",
     page_icon="🎛️",
     layout="wide",
     initial_sidebar_state="expanded",
 )
-
 # Teal-based color palette
 COLORS = {
     "primary": "#20808D",       # Muted teal
@@ -1142,7 +1141,7 @@ def fig_radar(regdf):
 
 def render_sidebar():
     with st.sidebar:
-        st.title("Rules-of-Origin Circumvention Simulator")
+        st.title("EU-Africa Trade Circumvention Simulator")
         st.caption("Updated")
         st.markdown("---")
 
@@ -1572,7 +1571,7 @@ def main():
     with st.spinner("Running analysis pipeline..."):
         tdf, gov_df, adf, mc, rdf = load_all(tuple(sorted(sel)), z_th, cap_th, n_sim, sc_name)
 
-    st.title("Rules-of-Origin Circumvention Simulator")
+    st.title("EU-Africa Trade Circumvention Simulator")
     sc = SCENARIOS[sc_name]
     st.markdown(f"**Scenario**: {sc.name} | **Countries**: {len(sel)} | **MC Iterations**: {n_sim:,}")
 
@@ -1588,7 +1587,7 @@ def main():
     with t6: tab_data(tdf, adf, rdf, mc, sc_name)
 
     st.markdown("---")
-    st.markdown('<div class="footer">Rules-of-Origin Circumvention Simulator | Open-Source Simulation Tool | '
+    st.markdown('<div class="footer">EU-Africa Trade Circumvention Simulator | Open-Source Simulation Tool | '
                 'Data: UN Comtrade, World Bank WGI, EU Access2Markets, AfCFTA e-Tariff Book | '
                 'MC calibration: EPPO/OLAF enforcement statistics</div>', unsafe_allow_html=True)
 
